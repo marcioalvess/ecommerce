@@ -3,12 +3,15 @@ const mongoose = require('mongoose');
 const Schema = new mongoose.Schema({
     products:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product'
+        ref: 'Product',
+       
     }],
-    userName:{
+    username:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        required: 'User'
+        
     },
+
     address:{
         street:{
             type:String,
@@ -21,14 +24,16 @@ const Schema = new mongoose.Schema({
         city:{
             type:String,
             required:true
-        },
+        }
     },
     payment:{
         card:{
-            type:String,
-        },
-        cvc:{
-            type:String,
+            number:{
+                type: String,
+            },
+            cvc:{
+                type:String,
+            }
         }
     }
 });

@@ -7,7 +7,7 @@ const SessionController = {
 
         try {
 
-            const user = await User.findOne ({username});
+            const user = await User.findOne ({ username });
             return res.status(200).json(user);
 
         } catch(err){
