@@ -1,4 +1,4 @@
-roduct = require ('../../models/Product');
+const Product = require ('../../models/Product');
 
 const ProductController = {
 
